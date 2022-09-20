@@ -1,0 +1,8 @@
+.button {
+    outline: 0;
+    padding: 10px 15px;
+
+    &:not(.m-0):not(.mb-0):not(.my-0) {
+        margin-bottom: 10px;
+    }
+}

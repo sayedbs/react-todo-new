@@ -1,0 +1,32 @@
+.list {
+    padding-left: 10px;
+
+    &:not(.list--default) {
+        li {
+            padding: 5px 5px 5px 0;
+
+            ul, ol {
+                padding-left: 25px;
+            }
+        }
+    }
+    &-item {
+        &-close {
+            cursor: pointer;
+            padding: 5px;
+            width: 25px;
+            height: 25px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border: 0;
+            background: transparent;
+            border-radius: 50%;
+            
+            &:hover {
+                background: rgb(255, 0, 0);
+                color: white;
+            }
+        }
+    }
+}
