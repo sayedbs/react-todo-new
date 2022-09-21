@@ -11,6 +11,14 @@
         }
     }
     &-item {
+        transition: transform 0.3s;
+
+        &--selected {
+            color: rgb(148, 60, 2);
+            font-weight: 700;
+            transform: translateX(30px) scale(1.1);
+        }
+
         &-close {
             cursor: pointer;
             padding: 5px;
@@ -22,7 +30,7 @@
             border: 0;
             background: transparent;
             border-radius: 50%;
-            
+
             &:hover {
                 background: rgb(255, 0, 0);
                 color: white;
