@@ -35,6 +35,7 @@ export const Todos = (props) => {
     };
     return (
         <>
+            <h2> Todos App </h2>
             <FormGroup
                 onKeyUp={handleKeyPress}
                 name="todoInput"
