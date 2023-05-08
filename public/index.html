@@ -25,6 +25,25 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
+    <script>
+      // Check if user has seen the message already
+      const hasSeenInstallPopup = localStorage.getItem("hasSeenInstallPopup");
+
+      // Detects if device is on iOS 
+      const isIos = () => {
+        const userAgent = window.navigator.userAgent.toLowerCase();
+        return /iphone|ipad|ipod/.test( userAgent );
+      }
+
+      // Detects if device is in standalone mode
+      const isInStandaloneMode = () => ('standalone' in window.navigator) && (window.navigator.standalone);
+
+      // Checks if should display install popup notification:
+      if (!hasSeenInstallPopup && isIos() && !isInStandaloneMode()) {
+        showInstallMessage();
+        localStorage.setItem("hasSeenInstallPopup", true);
+      }
+    </script>
     <title>React App</title>
   </head>
   <body>
